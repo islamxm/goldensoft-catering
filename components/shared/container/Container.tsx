@@ -1,9 +1,11 @@
 import styles from './styles.module.scss';
-import { FC, PropsWithChildren } from 'react'
+import { FC } from 'react'
+import PropsType from './types';
+import setClassNames from '@/utils/setClassNames';
 
-const Container:FC<PropsWithChildren> = ({children}) => {
+const Container:FC<PropsType> = ({children, ...restProps}) => {
   return (
-    <div className={styles.wrapper}>
+    <div {...restProps} className={setClassNames([styles.wrapper, restProps.className])}>
       {children}
     </div>
   )

@@ -14,6 +14,10 @@
   user-select: none !important;
 }
 
+@mixin unselectable {
+  user-select: none !important;
+}
+
 @mixin absoluteDef {
   position: absolute;
   top: 0;

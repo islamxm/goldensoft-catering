@@ -1,0 +1,12 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+    @include setFont(14px, 19px, 400);
+}
+
+.wrapper.primary {
+    color: var(--text);
+}
+.wrapper.secondary {
+    color: var(--text_light);
+}

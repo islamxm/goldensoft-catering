@@ -1,0 +1,23 @@
+@import '/styles/global/vars';
+
+.h1 {
+    @include defaultAnim;
+}   
+.h2 {
+    @include setFont(32px, 40px, 600);
+    @include defaultAnim;
+}
+.h3 {
+    @include defaultAnim;
+}
+.h4 {
+    @include setFont(20px, 28px, 600);
+    @include defaultAnim;
+}
+.h5 {
+    @include setFont(18px, 25px, 600);
+    @include defaultAnim;
+}
+.h6 {
+    @include defaultAnim;
+}

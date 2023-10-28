@@ -1,70 +1,73 @@
 import setClassNames from '@/utils/setClassNames';
 import styles from './styles.module.scss';
 import PropsType from './types';
-import { FC } from 'react'
+import React, { FC } from 'react'
+
 
 const Title:FC<PropsType> = (props) => {
   const {
     children,
     variant = 'primary',
     tag = 'h2',
+    element = tag,
+    className,
     ...restProps
   } = props
 
   switch(tag) {
     case 'h1':
-      return (
-        <h1
-          className={setClassNames([restProps?.className, styles[variant]])}
-          {...restProps}
-          >
-          {children}
-        </h1>
+      return React.createElement(
+        element, 
+        {
+          className: setClassNames([className, styles.h1, styles[variant]]), 
+          ...restProps
+        },
+        children
       )
     case 'h2':
-      return (
-        <h2
-          className={setClassNames([restProps?.className, styles[variant]])}
-          {...restProps}
-          >
-          {children}
-        </h2>
+      return React.createElement(
+        element, 
+        {
+          className: setClassNames([className, styles.h2, styles[variant]]), 
+          ...restProps
+        },
+        children
       )
     case 'h3':
-      return (
-        <h3
-          className={setClassNames([restProps?.className, styles[variant]])}
-          {...restProps}
-          >
-          {children}
-        </h3>
+      return React.createElement(
+        element, 
+        {
+          className: setClassNames([className, styles.h3, styles[variant]]), 
+          ...restProps
+        },
+        children
       )
     case 'h4':
-      return (
-        <h4
-          className={setClassNames([restProps?.className, styles[variant]])}
-          {...restProps}
-          >
-          {children}
-        </h4>
+      return React.createElement(
+        element, 
+        {
+          className: setClassNames([className, styles.h4, styles[variant]]), 
+          ...restProps
+        },
+        children
       )
     case 'h5':
-      return (
-        <h5
-          className={setClassNames([restProps?.className, styles[variant]])}
-          {...restProps}
-          >
-          {children}
-        </h5>
+      return React.createElement(
+        element, 
+        {
+          className: setClassNames([className, styles.h5, styles[variant]]), 
+          ...restProps
+        },
+        children
       )
     case 'h6':
-      return (
-        <h6
-          className={setClassNames([restProps?.className, styles[variant]])}
-          {...restProps}
-          >
-          {children}
-        </h6>
+      return React.createElement(
+        element, 
+        {
+          className: setClassNames([className, styles.h6, styles[variant]]), 
+          ...restProps
+        },
+        children
       )
   }
 }

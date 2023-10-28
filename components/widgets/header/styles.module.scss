@@ -1,3 +1,6 @@
+@import '/styles/global/vars.scss';
+
+
 .wrapper {
  position: fixed;
  top: 0;
@@ -7,6 +10,7 @@
  background-color: #fff; 
  padding: 18px 0;
  min-height: 134px;
+//  @include defaultAnim;
 
  .top, .bottom {
   padding: 6px 0;

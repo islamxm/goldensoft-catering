@@ -51,7 +51,7 @@ const Section:FC<PropsType> = (props) => {
             {
               typeof titleValue === 'string' ? (
                 <Title
-                  tag='h2'
+                  tag={'h2'}
                   variant={'primary'}
                   >
                   {titleValue}

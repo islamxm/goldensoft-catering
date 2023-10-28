@@ -6,6 +6,7 @@
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 li {
   list-style: none;
@@ -17,6 +18,9 @@ button,input {
   border: none;
   background-color: unset;
   font-family: inherit;
+}
+img, button {
+  @include unselectable;
 }
 body {
   width: 100%;  
