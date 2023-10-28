@@ -1,0 +1,54 @@
+//тут должны быть scss переменные
+
+///
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin untouchable {
+  pointer-events: none !important;
+  touch-action: none !important;
+  user-select: none !important;
+}
+
+@mixin absoluteDef {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin setFont(
+  $fontSize: 16px, 
+  $lineHeight: 21px, 
+  $fontWeight: 600
+) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+@mixin fill {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin defaultAnim {
+  transition: all .2s ease;
+}
+
+@mixin animTouch {
+  @include defaultAnim;
+  &:active {
+    transform: scale(.95);
+  }
+}
+
