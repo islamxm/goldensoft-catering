@@ -1,0 +1,68 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  padding: 12px 20px;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 4px 33px 0px rgba(0, 0, 0, 0.05);
+
+  .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--panel);
+    flex: 0 0 auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: flex;
+    }
+  }
+
+  .main {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .body {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+
+      .mod {
+        color: var(--text_light);
+        flex: 1 0 auto;
+        @include setFont(14px, 19px, 400);
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .volume {
+          width: 100%;
+        }
+        .counter {
+          width: 110px;
+          margin: 0 10px;
+          flex: 0 0 auto;
+        }
+        .price {
+          width: 100%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

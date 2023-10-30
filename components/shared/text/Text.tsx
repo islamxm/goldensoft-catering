@@ -11,8 +11,8 @@ const Text:FC<PropsType> = ({
 
     return (
         <p 
-            className={setClassNames([styles.wrapper, styles[variant]])}
             {...restProps}
+            className={setClassNames([styles.wrapper, styles[variant], restProps.className])}
             >
             {children}
         </p>

@@ -37,7 +37,7 @@ const ProductCardComponent:FC<PropsType> = ({
         </div>
       </div>
       <div className={styles.body}>
-          <Stack spacing={20}>
+          <Stack spacing={'20px'}>
             <Box>
               <Link href={'/'}>
                 <Title
@@ -52,6 +52,7 @@ const ProductCardComponent:FC<PropsType> = ({
             <Box>
               <Text
                 variant={'secondary'}
+                className={styles.text}
                 >
                 {description}  
               </Text>

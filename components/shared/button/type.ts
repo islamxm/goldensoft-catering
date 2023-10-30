@@ -13,7 +13,8 @@ export type ButtonType = React.HTMLProps<HTMLButtonElement> & {
   isRound?: boolean,
   endContent?: ReactNode,
   startContent?: ReactNode,
-  isLoading?: boolean
+  isLoading?: boolean,
+  isFill?: boolean
 }
 
 type PropsType = PropsWithChildren & ButtonType;

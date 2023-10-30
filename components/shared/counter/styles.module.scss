@@ -1,0 +1,35 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  @include flexCenter;
+  align-items: unset;
+  max-width: 110px;
+  width: 100%;
+  background-color: var(--panel);
+  min-height: 40px;
+  overflow: hidden;
+  border-radius: 100px;
+  padding: 0 5px;
+  .btn {
+    @include setFont(15px,15px,600);
+    @include flexCenter;
+    width: 30%;
+    @include defaultAnim;
+    &:hover {
+      color: var(--accent);
+    }
+    &:disabled {
+      @include untouchable;
+    }
+  }
+  .field {
+    @include flexCenter;
+    text-align: center;
+    @include setFont(15px,15px,600);
+    width: 40%;
+  }
+}
+
+.wrapper.fill {
+  max-width: unset;
+}

@@ -49,12 +49,24 @@
   }
 }
 
-.wrapper.simple {}
+.wrapper.simple {
+  color: var(--text);
+}
 .wrapper.simple_danger {}
-.wrapper.primary {}
+.wrapper.primary {
+  background-color: var(--accent);
+  color: #fff;
+}
 .wrapper.primary_outlined {}
-.wrapper.danger {}
+.wrapper.danger {
+  background-color: var(--accent_2);
+  color: #fff;
+}
 .wrapper.danger_outlined {}
+.wrapper.secondary {
+  background-color: var(--panel);
+  color: var(--text_light);
+}
 
 
 .wrapper.sm {

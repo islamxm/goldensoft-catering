@@ -4,15 +4,20 @@ import globalStyleVars from '@/data/styleVars';
 import PageLayout from '@/components/layouts/pageLayout/PageLayout';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import { ChakraProvider } from '@chakra-ui/react';
+
 setGlobalStyleVariables(globalStyleVars)
 
 const AppProvider:FC<PropsWithChildren> = ({children}) => {
   
 
   return (
-    <PageLayout>
-      {children}
-    </PageLayout>
+    <ChakraProvider>
+      <PageLayout>
+        {children}
+      </PageLayout>
+    </ChakraProvider>
+    
   )
 }
 

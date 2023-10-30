@@ -8,6 +8,7 @@
     @include defaultAnim;
 }
 .h3 {
+    @include setFont(24px, 32px, 600);
     @include defaultAnim;
 }
 .h4 {

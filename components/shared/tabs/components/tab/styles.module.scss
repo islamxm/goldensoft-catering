@@ -1,0 +1,35 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  @include flexCenter;
+  overflow: hidden;
+  padding: 12px 24px;
+  border-radius: 100px;
+  cursor: pointer;
+  @include defaultAnim;
+
+  &:hover {
+    background-color: var(--panel);
+    span {
+      color: var(--text);
+    }
+  }
+
+  span {
+    @include flexCenter;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--text_light);
+    @include setFont(16px, 16px, 600);
+    @include defaultAnim;
+  }
+}
+
+.wrapper.active {
+  background-color: var(--accent);
+
+  span {
+    color: #fff;
+  }
+}

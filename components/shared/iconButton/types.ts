@@ -4,8 +4,8 @@ import { ButtonVariant } from "../button/type";
 import { ButtonNativeType } from "../button/type";
 
 export type IconButtonType = React.HTMLProps<HTMLButtonElement> & {
-  variant?: ButtonVariant,
-  type?: ButtonNativeType,
+  variant?: ButtonVariant | 'secondary',
+  type?: ButtonNativeType , 
   buttonSize?: GlobalSize,
   isRound?: boolean,
   isLoading?: boolean

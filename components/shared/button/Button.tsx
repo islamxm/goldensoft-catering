@@ -21,6 +21,7 @@ const Button:FC<PropsType> = (props) => {
     endContent,
     startContent,
     isLoading,
+    isFill,
     ...restProps
   } = props
 
@@ -32,7 +33,8 @@ const Button:FC<PropsType> = (props) => {
         styles[variant || 'primary'],
         styles[buttonSize || 'md'],
         isRound && styles.round,
-        isLoading && styles.loading
+        isLoading && styles.loading,
+        isFill && styles.fill
       ])}>
       <div className={styles.body}>
         {isLoading && (

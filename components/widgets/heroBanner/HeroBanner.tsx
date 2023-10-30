@@ -5,9 +5,11 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import Container from '@/components/shared/container/Container';
 import Image from 'next/image';
 import img from '@/assets/img/heroBanner.png'
+import PropsType from './types';
 
-
-const HeroBanner:FC<any> = () => {
+const HeroBanner:FC<PropsType> = ({
+  list = []
+}) => {
   return (
     <div className={styles.wrapper}>
       <Container className={styles.container}>
@@ -27,15 +29,16 @@ const HeroBanner:FC<any> = () => {
             >
             <SwiperSlide className={styles.slide}>
               <Image
+                priority
                 src={img}
                 alt=''
                 />
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
-              {/* <Image
+              <Image
                 src={img}
                 alt=''
-                /> */}
+                />
             </SwiperSlide>
             <div id='heroBanner-pagination' className={styles.pagination}></div>
           </Swiper>
