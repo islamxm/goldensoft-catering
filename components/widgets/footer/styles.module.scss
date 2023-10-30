@@ -1,3 +1,19 @@
 .wrapper {
-  
+    flex: 0 0 auto;
+    .top {
+        border-top: 2px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+        .top_in {
+            padding: 25px 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+            
+            .part {
+                width: calc((100% / 3) - 30px);
+                margin: 0 15px;
+            }
+        }
+    }
 }

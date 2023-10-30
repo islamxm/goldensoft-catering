@@ -18,6 +18,7 @@ const ProductCardComponent:FC<PropsType> = ({
   description
 }) => {
   const [imageLoaded,setImageLoaded] = useState(false)
+  
   return (
     <article className={styles.wrapper}>
       <div className={styles.image}>

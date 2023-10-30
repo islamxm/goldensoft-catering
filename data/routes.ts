@@ -4,5 +4,7 @@ const ROUTES = {
   account: '/account',
   promo: '/promo',
   delivery: '/delivery',
-  contacts: '/contacts'
+  contacts: '/contacts',
+  aboutUs: '/about'
 }
+export default ROUTES;
