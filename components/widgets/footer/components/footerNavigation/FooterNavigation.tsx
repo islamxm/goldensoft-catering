@@ -10,8 +10,8 @@ const FooterNavigation: FC = () => {
             <div className={styles.label}><Title tag='h3'>Навигация</Title></div>
             <ul className={styles.list}>
                 {
-                    navigationMenuList.map(({label, href}) => (
-                        <li className={styles.item}>
+                    navigationMenuList.map(({label, href}, index) => (
+                        <li key={index} className={styles.item}>
                             <Link href={href}>{label}</Link>
                         </li>
                     ))
