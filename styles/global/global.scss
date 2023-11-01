@@ -3,10 +3,16 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
+  
 }
 a {
   text-decoration: none;
   color: inherit;
+  @include defaultAnim;
+  
+  &:hover {
+    color: var(--accent);
+  }
 }
 li {
   list-style: none;
@@ -39,4 +45,12 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   background-color: var(--bg);
+}
+
+
+
+
+//MODULES - потом надо вынести в отдельные файлы
+.modal {
+  border-radius: 22px !important;
 }

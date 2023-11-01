@@ -1,0 +1,26 @@
+.wrapper {
+  .main {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .ex {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: var(--text_light);
+    white-space: nowrap;
+  }
+}
+
+.wrapper.textLeft {
+  text-align: left;
+}
+.wrapper.textRight {
+  text-align: right;
+}
+.wrapper.textCenter {
+  text-align: center;
+}

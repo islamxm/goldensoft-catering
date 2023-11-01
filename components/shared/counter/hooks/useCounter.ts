@@ -21,6 +21,7 @@ const useCounter = ({
     const val = Number(e.target.value)
     if(val >= interval[0] && val <= interval[1]) {
       setValue(val)
+      onChange && onChange(val)
     }
   }
 

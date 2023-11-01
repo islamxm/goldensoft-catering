@@ -1,0 +1,44 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  @include defaultAnim;
+
+  // &:after {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   width: 60px;
+  //   height: 100%;
+  //   // border: 1px solid red;
+  //   content: '';
+  //   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%);
+  //   z-index: 2;
+  // }
+
+  .slider {
+    padding-right: 120px;
+    
+    
+    .slide {
+      width: fit-content;
+      
+
+      .item {
+        // padding: 12px 18px;
+        // white-space: nowrap;
+        // @include setFont(18px,20px,600);
+        // @include defaultAnim;
+        // @include flexCenter;
+        &:hover {
+          color: var(--accent_2);
+        }
+      }
+    }
+  }
+}
+
+.wrapper.hide {
+  width: 0px;
+}

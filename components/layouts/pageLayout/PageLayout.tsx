@@ -4,17 +4,18 @@ import Header from '@/components/widgets/header/Header';
 import Footer from '@/components/widgets/footer/Footer';
 
 import BasketDrawer from '@/components/widgets/basket/BasketDrawer';
+import Animated from '@/components/shared/animated/Animated';
 
 const PageLayout:FC<PropsWithChildren> = ({children}) => {
 
   return (
     <div className={styles.wrapper}>
-    <Header/>
+    <Animated><Header/></Animated>
     <main className={styles.main}>
       {children}
     </main>     
-    <Footer/> 
-
+    <Animated><Footer/></Animated> 
+    
 
     {/* GLOBAL COMPONENTS */}
     <BasketDrawer/>

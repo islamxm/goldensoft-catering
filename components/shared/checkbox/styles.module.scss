@@ -1,0 +1,59 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+
+  input {
+    @include untouchable;
+    @include absoluteDef;
+    z-index: -1;
+    visibility: hidden;
+  }
+
+  .label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include unselectable;
+
+    &:hover {
+      .icon {
+        border-color: var(--accent);
+      }
+    }
+
+    .icon {
+      flex: 0 0 auto;
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      background-color: var(--panel);
+      border: 2px solid var(--panel);
+      @include defaultAnim;
+      @include flexCenter;
+
+      .el {
+        transform: scale(0);
+        @include defaultAnim;
+        @include setFont(25px,25px);
+        color: #fff;
+      }
+
+    }
+
+    .label {
+      margin-left: 16px;
+      @include setFont(16px,19px, 600);
+    }
+  }
+
+  input:checked ~ .label {
+    .icon {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      .el {
+        transform: scale(1);
+      }
+    }
+  }
+
+}

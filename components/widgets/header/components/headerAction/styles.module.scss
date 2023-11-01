@@ -1,0 +1,15 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  @include flexCenter;
+  flex: 0 0 auto;
+
+  .item {
+    padding: 10px 16px;
+
+    .label {
+      @include setFont(14px,16px,600);
+      @include flexCenter;
+    }
+  }
+}

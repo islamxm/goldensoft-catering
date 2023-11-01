@@ -5,9 +5,27 @@
   height: 35px;
   border-radius: 10px;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   @include flexCenter;
   @include animTouch;
+
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--accent_2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30px;
+    min-width: 18px;
+    padding: 2px 4px;
+    text-align: center;
+    max-height: 18px;
+    border-radius: 22px;
+    color: #fff;
+    @include setFont(13px, 13px, 600);
+  }
 
   &:hover {
     opacity: .8

@@ -3,14 +3,14 @@ import styles from './styles.module.scss';
 import PropsType, {ButtonVariant} from './type';
 import { FC } from 'react'
 
-const st:Record<ButtonVariant, any> = {
-  simple: 'undefined',
-  simple_danger: 'undefined',
-  danger: 'undefined',
-  danger_outlined: 'undefined',
-  primary: 'undefined',
-  primary_outlined: 'undefined'
-}
+// const st:Record<ButtonVariant, any> = {
+//   simple: 'undefined',
+//   simple_danger: 'undefined',
+//   danger: 'undefined',
+//   danger_outlined: 'undefined',
+//   primary: 'undefined',
+//   primary_outlined: 'undefined',
+// }
 
 const Button:FC<PropsType> = (props) => {
   const {
@@ -34,7 +34,8 @@ const Button:FC<PropsType> = (props) => {
         styles[buttonSize || 'md'],
         isRound && styles.round,
         isLoading && styles.loading,
-        isFill && styles.fill
+        isFill && styles.fill,
+        restProps?.className
       ])}>
       <div className={styles.body}>
         {isLoading && (

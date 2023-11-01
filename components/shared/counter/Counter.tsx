@@ -11,20 +11,20 @@ const Counter:FC<PropsType> = ({
   interval = [0,10],
   isFill,
   fieldProps,
-  ...restProps
+  wrapperProps
 }) => {
   const {
     value,
     increment,
     decrement,
     handleChange
-  } = useCounter({defaultValue,interval,onChange})
+  } = useCounter({defaultValue,interval: interval ?? [0,10],onChange})
 
 
   return (
     <div 
-      {...restProps}
-      className={setClassNames([styles.wrapper, isFill && styles.fill, restProps?.className])}>
+      {...wrapperProps}
+      className={setClassNames([styles.wrapper, isFill && styles.fill, wrapperProps?.className])}>
       <button 
         disabled={value === interval[0]}
         onClick={decrement}

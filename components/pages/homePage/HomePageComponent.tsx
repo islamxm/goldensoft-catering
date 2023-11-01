@@ -10,7 +10,6 @@ import { Stack } from '@chakra-ui/react';
 import { TabListItem } from '@/components/shared/tabs/types';
 import {motion} from 'framer-motion';
 import useAnimated from '@/components/shared/animated/hooks/useAnimated';
-import Counter from '@/components/shared/counter/Counter';
 
 
 const tabList:TabListItem[] = [
@@ -36,12 +35,12 @@ const HomePageComponent:FC<any> = () => {
         >
         <Stack spacing={35}>
             <Tabs
-              onChange={(id, item, data) => {
-                console.log(item)
-              }}
-              list={tabList}
-              defaultActiveItem={{tabId: 1, tabLabel: 'Все'}}
-              />
+                onChange={(id, item, data) => {
+                  console.log(item)
+                }}
+                list={tabList}
+                defaultActiveItem={{tabId: 1, tabLabel: 'Все'}}
+                />
             <List
                 list={productList}
                 onRenderItem={(props) => {

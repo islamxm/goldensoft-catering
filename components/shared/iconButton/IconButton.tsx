@@ -10,6 +10,7 @@ const IconButton:FC<PropsType> = (props) => {
     buttonSize,
     isRound = false,
     isLoading,
+    badge,
     ...restProps
   } = props
 
@@ -24,6 +25,11 @@ const IconButton:FC<PropsType> = (props) => {
         isLoading && styles.loading
       ])}
       >
+      {badge && <div className={styles.badge}>
+        {typeof badge === 'number' ? (
+          badge > 99 ? '+99' : badge
+        ) : badge}  
+      </div>}
       {isLoading && (
         <div className={styles.loader}></div>
       )}

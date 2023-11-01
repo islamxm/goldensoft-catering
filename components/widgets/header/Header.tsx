@@ -4,53 +4,38 @@ import PropsType from './types';
 import Container from '@/components/shared/container/Container';
 import useHeaderState from './utils/useHeaderState';
 import setClassNames from '@/utils/setClassNames';
-import Image from 'next/image';
-import logo from '@/assets/img/logo.svg';
-import Button from '@/components/shared/button/Button';
+import HeaderMenu from './components/headerMenu/HeaderMenu';
+import HeaderSearch from './components/headerSearch/HeaderSearch';
+import { HeaderContext } from './utils/HeaderContext';
+import HeaderAction from './components/headerAction/HeaderAction';
+import HeaderTop from './components/headerTop/HeaderTop';
+import useAnimated from '@/components/shared/animated/hooks/useAnimated';
+import {motion} from 'framer-motion';
 
 const Header:FC<PropsType> = () => {
-  const {isScrolled} = useHeaderState()
+  const {animateOptions} = useAnimated()
+  const headerState = useHeaderState()
 
   return (
-    <header className={setClassNames([
+    <HeaderContext.Provider value={headerState}>
+    <motion.header 
+      {...{...animateOptions, initial: animateOptions ? {opacity: 0, scale: 1} : undefined}} 
+      className={setClassNames([
       styles.wrapper,
-      isScrolled && styles.scrolled
+      headerState.isScrolled && styles.scrolled
     ])}>
-      <div className={styles.top}>
-        <Container>
-          <div className={styles.top_in}>
-            <div className={styles.top_main}>
-              <div className={styles.logo}>
-                <Image
-                  src={logo}
-                  alt='Logotype'
-                  />  
-              </div>
-              <div className={styles.top_nav}>
-
-              </div> 
-            </div>
-            <div className={styles.top_ex}>
-
-            </div>
-          </div>
-        </Container>
-      </div>
+      <HeaderTop/>
       <div className={styles.bottom}>
         <Container>
           <div className={styles.bottom_in}>
-            <div className={styles.nav}>
-              <div className={styles.menu}></div>  
-              <div className={styles.search}></div>
-            </div>
-            <div className={styles.action}>
-              <div className={styles.action_item}></div>
-              <div className={styles.action_item}></div>
-            </div>
+          <HeaderMenu/>
+              {headerState?.isSearchOpen && <HeaderSearch/>}
+            <HeaderAction/>
           </div>
         </Container>
       </div>
-    </header>
+    </motion.header>
+    </HeaderContext.Provider>
   )
 }
 

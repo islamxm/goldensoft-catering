@@ -11,6 +11,7 @@ import Text from '@/components/shared/text/Text';
 import Price from '@/components/shared/price/Price';
 import setClassNames from '@/utils/setClassNames';
 import { PulseLoader } from 'react-spinners';
+import Counter from '@/components/shared/counter/Counter';
 
 const ProductCardComponent:FC<PropsType> = ({
   prevImage,
@@ -18,6 +19,7 @@ const ProductCardComponent:FC<PropsType> = ({
   description
 }) => {
   const [imageLoaded,setImageLoaded] = useState(false)
+  const [testCount, setTestCount] = useState(0)
   
   return (
     <article className={styles.wrapper}>
@@ -68,7 +70,18 @@ const ProductCardComponent:FC<PropsType> = ({
                   }
                 }}
                 />
-              <Button>Выбрать</Button>
+              {
+                testCount > 0 ? (
+                  <Counter
+                    interval={[0,10]}
+                    defaultValue={testCount}
+                    onChange={setTestCount}
+                    />
+                ) : (
+                  <Button style={{minHeight: 40}} onClick={() => setTestCount(s => s + 1)}>Выбрать</Button>
+                )
+              }
+              
             </Flex>
           </Stack>
       </div>

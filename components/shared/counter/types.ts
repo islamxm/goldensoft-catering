@@ -1,12 +1,13 @@
 import { HTMLProps } from "react";
 
-type PropsType = HTMLProps<HTMLDivElement> & {
+type PropsType = {
   defaultValue?: number,
   onChange?: CounterValueChange,
   interval?: [number,number],
   fieldProps?: HTMLProps<HTMLInputElement> & {
 
   },
+  wrapperProps?: HTMLProps<HTMLDivElement>
   isFill?: boolean
 }
 

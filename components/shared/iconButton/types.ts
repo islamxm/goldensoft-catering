@@ -8,7 +8,8 @@ export type IconButtonType = React.HTMLProps<HTMLButtonElement> & {
   type?: ButtonNativeType , 
   buttonSize?: GlobalSize,
   isRound?: boolean,
-  isLoading?: boolean
+  isLoading?: boolean,
+  badge?: ReactNode
 }
 
 type PropsType = PropsWithChildren & IconButtonType;

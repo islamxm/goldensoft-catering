@@ -6,6 +6,7 @@
   overflow: hidden;
   border: 2px solid transparent;
   position: relative;
+  white-space: nowrap;
 
   @include flexCenter;
   @include setFont(14px, 15px, 600);
@@ -105,7 +106,13 @@
   color: var(--accent_2);
 }
 
+.wrapper.secondary_outlined {
+  color: var(--text_light);
 
+  &:hover {
+    color: var(--accent);
+  }
+}
 
 //SIZES 
 .wrapper.sm {

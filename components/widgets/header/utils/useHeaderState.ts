@@ -3,9 +3,14 @@ import { useEffect, useState } from "react"
 const useHeaderState = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [actionWidth, setActionWidth] = useState<number>(0)
+
+  
 
   const onScroll = (e:any) => {
-    if(document.documentElement.scrollTop > 10) {
+    console.log(document.documentElement.scrollTop)
+    if(document.documentElement.scrollTop > 50) {
       setIsScrolled(true)
     } else setIsScrolled(false)
   }
@@ -17,9 +22,28 @@ const useHeaderState = () => {
     }
   }, [])
 
+  const searchClose = () => {
+    setIsSearchOpen(false)
+  }
+
+  const searchOpen = () => {
+    setIsSearchOpen(true)
+  }
+
+  const searchToggle = () => {
+    setIsSearchOpen(s => !s)
+  }
+
   return {
     isScrolled,
-    isHidden
+    isHidden,
+    isSearchOpen,
+    actionWidth,
+
+    searchClose,
+    searchOpen,
+    searchToggle,
+    setActionWidth
   };
 }
 

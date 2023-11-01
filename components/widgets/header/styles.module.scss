@@ -9,22 +9,32 @@
  z-index: 3;
  background-color: #fff; 
  padding: 18px 0;
- min-height: 134px;
+ @include defaultAnim;
+//  min-height: 134px;
 //  @include defaultAnim;
 
- .top, .bottom {
-  padding: 6px 0;
- }
 
- .top {
-  .top_in {
-
-  }
- }
 
  .bottom {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
   .bottom_in {
+    @include flexCenter;
+    justify-content: space-between;
 
+    .nav {
+      width: 100%;
+      overflow: hidden;
+      @include flexCenter;
+      justify-content: space-between;
+
+      .nav_list {
+        width: 100%;
+        overflow: hidden;
+      }
+    }
   }
  }
 }
@@ -32,4 +42,6 @@
 .wrapper.scrolled {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(11px);
+  padding: 0;
+  // min-height: unset;
 }
