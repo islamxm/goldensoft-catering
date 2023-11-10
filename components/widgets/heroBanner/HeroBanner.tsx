@@ -36,6 +36,7 @@ const HeroBanner:FC<PropsType> = ({
             </SwiperSlide>
             <SwiperSlide className={styles.slide}>
               <Image
+                priority
                 src={img}
                 alt=''
                 />
