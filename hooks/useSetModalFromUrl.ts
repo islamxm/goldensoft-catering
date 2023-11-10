@@ -29,7 +29,6 @@ const useSetFromModalUrl = () => {
   }
   
   useEffect(() => {
-    console.log('render')
     switchModals()
   }, [modalList])
 }
