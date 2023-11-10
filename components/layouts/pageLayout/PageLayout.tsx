@@ -5,6 +5,8 @@ import Footer from '@/components/widgets/footer/Footer';
 
 import BasketDrawer from '@/components/widgets/basket/BasketDrawer';
 import Animated from '@/components/shared/animated/Animated';
+import GoToTop from '@/components/widgets/goToTop/GoToTop';
+import ProductModal from '@/components/widgets/product/ProductModal';
 
 const PageLayout:FC<PropsWithChildren> = ({children}) => {
 
@@ -18,7 +20,11 @@ const PageLayout:FC<PropsWithChildren> = ({children}) => {
     
 
     {/* GLOBAL COMPONENTS */}
+    <GoToTop/>
+
+    {/* MODALS & DRAWERS*/}
     <BasketDrawer/>
+    <ProductModal/>
   </div>
     
   )

@@ -14,7 +14,7 @@ const Tabs:FC<PropsType> = ({
     activeTab, 
     setActiveTab
   } = useTabsHook(list.length, defaultActiveItem)
-
+  
   return (
     <div className={styles.wrapper}>
       {

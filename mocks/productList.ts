@@ -11,44 +11,44 @@ const productList: ProductCompactType[] = [
     prevImage: img1
   },
   {
-    id: 1,
+    id: 2,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...'
   },
   {
-    id: 1,
+    id: 3,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...',
     prevImage: img3
   },
   {
-    id: 1,
+    id: 4,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...',
     prevImage: img2
   },
   {
-    id: 1,
+    id: 5,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...'
   },
   {
-    id: 1,
+    id: 6,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...'
   },
   {
-    id: 1,
+    id: 7,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...'
   },
   {
-    id: 1,
+    id: 8,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...'
   },
   {
-    id: 1,
+    id: 9,
     title: 'Банзай',
     description: 'Нори, японский рис, творожный сыр Cremette, креветка темп...'
   }

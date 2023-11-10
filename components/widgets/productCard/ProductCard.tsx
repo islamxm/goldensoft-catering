@@ -12,32 +12,23 @@ import Price from '@/components/shared/price/Price';
 import setClassNames from '@/utils/setClassNames';
 import { PulseLoader } from 'react-spinners';
 import Counter from '@/components/shared/counter/Counter';
+import ProductImage from '@/components/shared/productImage/ProductImage';
 
 const ProductCardComponent:FC<PropsType> = ({
   prevImage,
   title,
   description
 }) => {
-  const [imageLoaded,setImageLoaded] = useState(false)
   const [testCount, setTestCount] = useState(0)
   
   return (
     <article className={styles.wrapper}>
-      <div className={styles.image}>
-        {!imageLoaded && (
-          <div className={styles.loading}>
-            <PulseLoader color='var(--accent)'/>
-          </div>
-        )}
-        <div className={setClassNames([styles.image_el, imageLoaded && styles.loaded])}>
-          <Image
-            src={prevImage || placeholder}
-            alt={title || 'image-alt'}
-            className={setClassNames([!prevImage && styles.empty])}
-            onLoadingComplete={() => setImageLoaded(true)}
-            />
-        </div>
-      </div>
+      <ProductImage
+        data={{
+          src: prevImage,
+          alt: title || 'image-alt'
+        }}
+        />
       <div className={styles.body}>
           <Stack spacing={'20px'}>
             <Box>

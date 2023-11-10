@@ -9,8 +9,14 @@ import { Box, Flex, Stack } from '@chakra-ui/react';
 import Title from '@/components/shared/title/Title';
 import { PulseLoader } from 'react-spinners';
 import setClassNames from '@/utils/setClassNames';
+import Text from '@/components/shared/text/Text';
 
-const CategoryCardComponent: FC<PropsType> = () => {
+
+
+const CategoryCardComponent: FC<PropsType> = ({
+  prevImage,
+  title,
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false)
 
   return (
@@ -23,17 +29,19 @@ const CategoryCardComponent: FC<PropsType> = () => {
         )}
         <div className={setClassNames([styles.image_el, imageLoaded && styles.loaded])}>
           <Image
-            src={placeholder}
-            alt={'image-alt'}
-            className={setClassNames([styles.empty])}
+            src={prevImage || placeholder}
+            alt={title || 'image-alt'}
+            className={setClassNames([!prevImage && styles.empty])}
             onLoadingComplete={() => setImageLoaded(true)}
           />
         </div>
       </div>
       <div className={styles.body}>
-        <Stack spacing={20}>
+        <Stack height={'100%'} spacing={'10px'}>
           <Box>
-            <div className={styles.label}>Категория</div>
+            <Text 
+              variant={'secondary'} 
+              className={styles.text}>Категория</Text>
           </Box>
           <Box>
             <Link href={'/'}>
@@ -42,12 +50,12 @@ const CategoryCardComponent: FC<PropsType> = () => {
                 tag='h5'
                 element='div'
                 >
-                «Филадельфия»
+                {title}
               </Title>
             </Link>
           </Box>
-          <Box>
-            <Button variant={'primary_outlined'}>
+          <Box flex={'1 0 auto'} className={styles.action}>
+            <Button isFill variant={'primary'}>
               Перейти  
             </Button>   
           </Box>

@@ -1,0 +1,25 @@
+@import '/styles/global/vars.scss';
+
+.trigger {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include setFont(22px,22px,400);
+    color: var(--text_light);
+    flex: 0 0 auto;
+    margin-left: 3px;
+  }
+}
+
+.content {
+  box-shadow: 0 0 10px var(--text_light) !important;
+  border: none !important;
+  @include setFont(12px,18px,500);
+  background-color: var(--accent) !important;
+  color: #fff;
+  border-radius: 12px !important;
+}

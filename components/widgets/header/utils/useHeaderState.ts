@@ -9,7 +9,6 @@ const useHeaderState = () => {
   
 
   const onScroll = (e:any) => {
-    console.log(document.documentElement.scrollTop)
     if(document.documentElement.scrollTop > 50) {
       setIsScrolled(true)
     } else setIsScrolled(false)

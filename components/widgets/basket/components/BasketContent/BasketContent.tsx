@@ -12,11 +12,11 @@ const BasketContent:FC<any> = () => {
           <Stack spacing={'12px'}>
             <BasketProductItem/>
             <BasketProductItem/>
+            {/* <BasketProductItem/>
             <BasketProductItem/>
             <BasketProductItem/>
             <BasketProductItem/>
-            <BasketProductItem/>
-            <BasketProductItem/>
+            <BasketProductItem/> */}
           </Stack>
         </Box>
         <BasketPromo/>

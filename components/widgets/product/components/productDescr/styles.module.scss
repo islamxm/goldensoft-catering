@@ -1,0 +1,31 @@
+.wrapper {
+  padding: 12px;
+  border-radius: 16px;
+  background-color: var(--panel);
+
+  .title {
+
+  }
+
+  .body {
+    font-weight: 500;
+
+    ul {
+      li {
+        position: relative;
+        padding-left: 22px;
+
+        &:after {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          content: '';
+          border-radius: 100%;
+          background-color: var(--accent_2);
+          top: calc(50% - 5px);
+          left: 0;
+        }
+      }
+    }
+  }
+}

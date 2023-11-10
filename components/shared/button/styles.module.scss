@@ -7,6 +7,7 @@
   border: 2px solid transparent;
   position: relative;
   white-space: nowrap;
+  text-overflow: ellipsis;
 
   @include flexCenter;
   @include setFont(14px, 15px, 600);
@@ -24,7 +25,8 @@
 
   .body {
     @include flexCenter;
-
+    white-space: nowrap;
+    
     .ex {
       margin: 0 4px;
       flex: 0 0 auto;

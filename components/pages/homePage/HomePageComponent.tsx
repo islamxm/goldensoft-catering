@@ -10,6 +10,7 @@ import { Stack } from '@chakra-ui/react';
 import { TabListItem } from '@/components/shared/tabs/types';
 import {motion} from 'framer-motion';
 import useAnimated from '@/components/shared/animated/hooks/useAnimated';
+import CategoryCard from '@/components/widgets/categoryCard/CategoryCard';
 
 
 const tabList:TabListItem[] = [
@@ -44,7 +45,13 @@ const HomePageComponent:FC<any> = () => {
             <List
                 list={productList}
                 onRenderItem={(props) => {
-                  return <ProductCard {...props}/>
+                  //ТЕСТОВАЯ ПРОВЕРКА
+                  if(props?.id === 1) {
+                    return <CategoryCard {...props}/>
+                  } else {
+                    return <ProductCard {...props}/>
+                  }
+                  
                 }}
                 />
         </Stack>

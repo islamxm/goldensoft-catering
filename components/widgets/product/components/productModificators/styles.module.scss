@@ -1,0 +1,12 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  .collapsable {
+    @include defaultAnim;
+  }
+  .action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

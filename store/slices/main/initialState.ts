@@ -1,5 +1,6 @@
 const initialState = {
-  isBasketOpen: false
+  isBasketOpen: false,
+  isProductOpen: true
 }
 
 export default initialState;

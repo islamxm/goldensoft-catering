@@ -20,5 +20,10 @@
     @include defaultAnim;
 }
 .h6 {
+    @include setFont(16px, 21px, 600);
     @include defaultAnim;
+}
+
+.secondary {
+    color: var(--text_light);
 }

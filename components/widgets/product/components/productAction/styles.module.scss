@@ -1,0 +1,33 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--panel);
+  padding: 20px 30px;
+  border-radius: 22px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .price {
+    display: flex;
+    align-items: center;
+    // font-weight: 600;
+
+    .label {
+      margin-right: 10px;
+      @include setFont(18px,25px,600);
+    }
+    
+    .value {
+      @include setFont(24px,28px,600);
+    }
+
+  }
+  .action {
+
+  }
+}

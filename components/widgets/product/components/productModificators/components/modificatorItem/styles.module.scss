@@ -1,0 +1,15 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .main {
+    font-weight: 500;
+  }
+
+  .action {
+    @include flexCenter;
+  }
+}

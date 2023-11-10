@@ -1,0 +1,10 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  
+  .description {
+    @include setFont(16px,25px,500);
+  }
+}

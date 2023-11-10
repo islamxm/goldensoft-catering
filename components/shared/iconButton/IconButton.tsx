@@ -2,6 +2,7 @@ import styles from './styles.module.scss';
 import { FC } from 'react'
 import PropsType from './types';
 import setClassNames from '@/utils/setClassNames';
+import setSquareSize from '@/utils/setSquareSize';
 
 const IconButton:FC<PropsType> = (props) => {
   const {
@@ -24,6 +25,7 @@ const IconButton:FC<PropsType> = (props) => {
         isRound && styles.round,
         isLoading && styles.loading
       ])}
+      style={{...restProps.style, ...setSquareSize(buttonSize)}}
       >
       {badge && <div className={styles.badge}>
         {typeof badge === 'number' ? (

@@ -3,6 +3,7 @@ import { FC } from 'react'
 import Title from '@/components/shared/title/Title';
 import { Stack } from '@chakra-ui/react';
 import PropsType from './types';
+import WithHint from '@/components/shared/withHint/WithHint';
 
 const BasketHead:FC<PropsType> = ({
   countPrice,
