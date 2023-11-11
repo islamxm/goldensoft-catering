@@ -3,14 +3,10 @@
 .wrapper {
     @include setFont(14px, 19px, 400);
     overflow: hidden;
-
-
-    //НАДО ПОД ЭТО СОЗДАТЬ ИЗМЕНЯЕМЫЙ ФУНКЦИОНАЛ ДЛЯ КОМПОНЕНТА
-    // text-overflow: ellipsis;
-    // display: -webkit-box;
-    // box-orient: vertical;
-    // -webkit-box-orient: vertical;
-    // -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
 }
 
 

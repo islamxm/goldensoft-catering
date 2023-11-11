@@ -29,6 +29,7 @@ const PromoCardComponent:FC<PropsType> = (props) => {
               <Link href={'/'}>Скидка 10% в день рождения</Link>
             </Title>
             <Text 
+              ellipsisLineCount={2}
               className={styles.descr}
               variant={'secondary'}>
             Акция не распространяется на сеты, комбо наборы, нагетсы, фри.

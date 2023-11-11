@@ -36,6 +36,7 @@
       display: flex;
       @include defaultAnim;
     }
+    
     img:not(.empty) {
       &:hover {
         transform: scale(1.1);
