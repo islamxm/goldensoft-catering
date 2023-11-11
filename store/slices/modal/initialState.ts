@@ -1,7 +1,7 @@
 import ModalList from "@/data/modalList";
 
 const initialState:Record<keyof typeof ModalList, boolean> = {
-  basketDrawer: true,
+  basketDrawer: false,
   productModal: false,
   mainLocationModal: false,
   loginModal: false,
