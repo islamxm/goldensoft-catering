@@ -8,6 +8,8 @@ import { HeaderContext } from '../../utils/HeaderContext';
 import HeaderNav from '../headerNav/HeaderNav';
 import InfoBadge from '@/components/shared/infoBadge/InfoBadge';
 import Link from 'next/link';
+
+
 const HeaderTop:FC<any> = () => {
   const headerState = useContext(HeaderContext)
 
@@ -16,12 +18,12 @@ const HeaderTop:FC<any> = () => {
       <Container>
           <div className={styles.top_in}>
             <div className={styles.top_main}>
-              <div className={styles.logo}>
+              <Link href={'/'} className={styles.logo}>
                 <Image
                   src={logo}
                   alt='Logotype'
-                  />  
-              </div>
+                  />
+              </Link>
               <HeaderNav/>
             </div>
             <div className={styles.top_ex}>

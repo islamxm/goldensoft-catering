@@ -1,17 +1,20 @@
 import styles from './styles.module.scss';
-import { FC, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 import navigationMenuList from '@/data/navigationMenuList';
 import Button from '@/components/shared/button/Button';
 import {FiMapPin} from 'react-icons/fi';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import MainLocationModal from '@/components/modals/mainLocationModal/MainLocationModal';
+import { useRouter } from 'next/router';
 
 const HeaderNav:FC<any> = () => {
   const [modal, setModal] = useState(false)
+  const router = useRouter()
 
-  return (
-    
+  useEffect(() => console.log(router), [router])
+
+  return (  
     <div className={styles.wrapper}>
       <MainLocationModal
         isOpen={modal}
@@ -27,7 +30,6 @@ const HeaderNav:FC<any> = () => {
           Краснодар
         </Button>
       </div>
-      
       <Swiper  
         modules={[FreeMode]}
         slidesPerView={'auto'}
@@ -37,7 +39,12 @@ const HeaderNav:FC<any> = () => {
         {
           navigationMenuList.map((i,index) => (
             <SwiperSlide className={styles.slide} tag='li' key={index}>
-              <Button className={styles.item} variant={'secondary_outlined'}>{i.label}</Button>
+              <Button 
+                onClick={() => router.push(i.href)} 
+                className={styles.item} 
+                variant={router?.route?.includes(i.href) ? 'primary_outlined' : 'secondary_outlined'}>
+                  {i.label}
+              </Button>
             </SwiperSlide>
           ))
         }

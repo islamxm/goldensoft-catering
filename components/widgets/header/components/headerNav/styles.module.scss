@@ -13,9 +13,9 @@
     }
   }
 
-
   .item {
     @include setFont(16px,16px,600); 
+    border: none !important;
   }
 
   .location {
