@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 import { FC } from 'react'
 import Section from '@/components/shared/section/Section';
 import ProductCard from '@/components/widgets/productCard/ProductCard';
-import List from '@/components/widgets/list/List';
+import List from '@/components/shared/list/List';
 import productList from '@/mocks/productList';
 import HeroBanner from '@/components/widgets/heroBanner/HeroBanner';
 import Tabs from '@/components/shared/tabs/Tabs';

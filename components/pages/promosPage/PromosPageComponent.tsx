@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import {motion} from 'framer-motion';
 import useAnimated from '@/components/shared/animated/hooks/useAnimated';
 import Section from '@/components/shared/section/Section';
-import List from '@/components/widgets/list/List';
+import List from '@/components/shared/list/List';
 import PromoCard from '@/components/widgets/promoCard/PromoCard';
 
 const list = new Array(10).fill({})

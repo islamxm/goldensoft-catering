@@ -9,7 +9,7 @@ const BasketPromo:FC<any> = () => {
   return (
     <div className={styles.wrapper}>
       <Stack spacing={'12px'}>
-        <Title tag='h4'>Промокод</Title>
+        <Title tag='h5'>Промокод</Title>
         <div className={styles.body}>
           <div className={styles.input}>
             <Input

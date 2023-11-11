@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { FC, useRef } from 'react'
+import { FC } from 'react'
 import PropsType from './types';
 import Title from '@/components/shared/title/Title';
 import { Stack } from '@chakra-ui/react';
@@ -63,7 +63,6 @@ const ProductModificators:FC<PropsType> = ({
             )
           }
         </Stack>
-        
       </Stack>
     </div>
   )

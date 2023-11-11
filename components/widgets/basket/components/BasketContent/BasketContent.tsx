@@ -3,6 +3,7 @@ import { FC } from 'react'
 import BasketProductItem from '../BasketProductItem/BasketProductItem';
 import { Stack, Box } from '@chakra-ui/react';
 import BasketPromo from '../BasketPromo/BasketPromo';
+import BasketRecs from '../BasketRecs/BasketRecs';
 
 const BasketContent:FC<any> = () => {
   return (
@@ -12,13 +13,9 @@ const BasketContent:FC<any> = () => {
           <Stack spacing={'12px'}>
             <BasketProductItem/>
             <BasketProductItem/>
-            {/* <BasketProductItem/>
-            <BasketProductItem/>
-            <BasketProductItem/>
-            <BasketProductItem/>
-            <BasketProductItem/> */}
           </Stack>
         </Box>
+        <BasketRecs/>
         <BasketPromo/>
       </Stack>
     </div>

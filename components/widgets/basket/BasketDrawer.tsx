@@ -8,7 +8,7 @@ import Basket from './Basket'
 import IconButton from '@/components/shared/iconButton/IconButton'
 import {IoClose} from 'react-icons/io5';
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
-import { close_basketModal, open_basketModal } from '@/store/slices/modal/modalSlice';
+import { close_basketModal } from '@/store/slices/modal/modalSlice';
 
 const BasketDrawer = () => {
   const dispatch = useAppDispatch()

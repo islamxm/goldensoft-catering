@@ -27,3 +27,29 @@
     }
   }
 }
+
+.wrapper.mini {
+  padding: 8px;
+  width: 250px;
+  height: 100px;
+
+  .image {
+    width: 85px;
+    flex: 0 0 auto;
+  }
+
+  .body {
+    padding: 0;
+    padding-left: 5px;
+
+    .price {
+      span {
+        font-size: 16px;
+      }
+    }
+    .counter {
+      min-height: 35px;
+      max-width: 60px;
+    }
+  }
+}
