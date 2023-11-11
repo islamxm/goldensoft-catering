@@ -1,0 +1,11 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  .label {
+    @include setFont(14px,17px,600);
+    margin-bottom: 2px;
+  }
+  .select {
+    
+  }
+}

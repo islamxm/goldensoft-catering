@@ -4,9 +4,6 @@ import { Stack } from '@chakra-ui/react';
 import Title from '@/components/shared/title/Title';
 import Button from '@/components/shared/button/Button';
 import Input from '@/components/shared/input/Input';
-import InputMasks from '@/data/inputMasks';
-
-import { BsTrash, BsTelephone } from 'react-icons/bs';
 
 const BasketPromo:FC<any> = () => {
   return (
@@ -24,7 +21,6 @@ const BasketPromo:FC<any> = () => {
             применить 
           </Button>  
         </div>
-        
       </Stack>      
     </div>
   )

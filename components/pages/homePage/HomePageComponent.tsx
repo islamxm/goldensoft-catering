@@ -12,7 +12,6 @@ import {motion} from 'framer-motion';
 import useAnimated from '@/components/shared/animated/hooks/useAnimated';
 import CategoryCard from '@/components/widgets/categoryCard/CategoryCard';
 
-
 const tabList:TabListItem[] = [
   {data: {}, tabId: 1, tabLabel: 'Все'},
   {data: {}, tabId: 2, tabLabel: 'Холодные'},

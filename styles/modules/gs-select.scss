@@ -1,0 +1,69 @@
+@import '/styles/global/vars.scss';
+
+.gs-select__control {
+  border-radius: 12px !important;
+  overflow: hidden;
+  border: 2px solid var(--panel) !important;
+  box-shadow: unset !important;
+  transition: all .2s ease;
+  color: var(--text);
+
+  .gs-select__value-container {
+    padding-left: 17px;
+    padding-right: 17px;
+    font-weight: 500;
+    height: 46px;
+    background-color: var(--panel);
+    @include defaultAnim;
+  }
+
+  .gs-select__indicators {
+    @include defaultAnim;
+    background-color: var(--panel);
+
+    .gs-select__indicator-separator {
+      display: none;
+    }
+
+    .gs-select__dropdown-indicator {
+      padding-left: 0;
+    }
+  }
+}
+
+.gs-select__menu-portal {
+
+  .gs-select__menu {
+    
+  }
+
+}
+
+.gs-select__menu {
+  border-radius: 12px !important;
+  border: none !important;
+  overflow: hidden;
+
+  .gs-select__menu-list {
+    padding: 0 !important;
+    .gs-select__option {
+      font-weight: 500;
+      @include defaultAnim;
+      cursor: pointer;
+    }
+    .gs-select__option--is-focused {
+      background-color: var(--panel);
+    }
+    .gs-select__option--is-selected {
+      background-color: var(--accent);
+    }
+  }
+}
+
+.gs-select__control.gs-select__control--is-focused {
+  border-color: var(--accent) !important;
+
+  .gs-select__value-container, .gs-select__indicators {
+    background-color: #fff !important;
+  }
+}
