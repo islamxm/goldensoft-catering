@@ -8,7 +8,8 @@ import PropsType from './types';
 
 const ProductImage:FC<PropsType> = ({
   size = '100%',
-  data
+  data,
+  heightCoef = 1
 }) => {
   const {
     src,
@@ -17,7 +18,11 @@ const ProductImage:FC<PropsType> = ({
   const [loaded, setLoaded] = useState(false)
 
   return (
-    <div className={styles.wrapper} style={{width: size}}>
+    <div className={styles.wrapper} style={{
+      height: heightCoef === 'fill' ? '100%' : 'auto',
+      width: size, 
+      paddingBottom: `${100 * (typeof heightCoef === 'number' ? heightCoef : 1)}%`
+    }}>
       {!loaded && (
         <div className={styles.loading}>
           <PulseLoader color='var(--accent)'/>
@@ -25,6 +30,7 @@ const ProductImage:FC<PropsType> = ({
       )}
       <div className={setClassNames([styles.image, loaded && styles.loaded])}>
         <Image
+          {...data}
           src={src || placeholder}
           alt={alt || 'image'}
           onLoadingComplete={() => setLoaded(true)}

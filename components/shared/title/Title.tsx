@@ -9,7 +9,8 @@ const Title:FC<PropsType> = (props) => {
     children,
     variant = 'primary',
     tag = 'h2',
-    element = tag,
+    element = tag, //надо удалить
+    as = element,
     className,
     ...restProps
   } = props
@@ -17,7 +18,7 @@ const Title:FC<PropsType> = (props) => {
   switch(tag) {
     case 'h1':
       return React.createElement(
-        element, 
+        as, 
         {
           className: setClassNames([className, styles.h1, styles[variant]]), 
           ...restProps
@@ -26,7 +27,7 @@ const Title:FC<PropsType> = (props) => {
       )
     case 'h2':
       return React.createElement(
-        element, 
+        as, 
         {
           className: setClassNames([className, styles.h2, styles[variant]]), 
           ...restProps
@@ -35,7 +36,7 @@ const Title:FC<PropsType> = (props) => {
       )
     case 'h3':
       return React.createElement(
-        element, 
+        as, 
         {
           className: setClassNames([className, styles.h3, styles[variant]]), 
           ...restProps
@@ -44,7 +45,7 @@ const Title:FC<PropsType> = (props) => {
       )
     case 'h4':
       return React.createElement(
-        element, 
+        as, 
         {
           className: setClassNames([className, styles.h4, styles[variant]]), 
           ...restProps
@@ -53,7 +54,7 @@ const Title:FC<PropsType> = (props) => {
       )
     case 'h5':
       return React.createElement(
-        element, 
+        as, 
         {
           className: setClassNames([className, styles.h5, styles[variant]]), 
           ...restProps
@@ -62,7 +63,7 @@ const Title:FC<PropsType> = (props) => {
       )
     case 'h6':
       return React.createElement(
-        element, 
+        as, 
         {
           className: setClassNames([className, styles.h6, styles[variant]]), 
           ...restProps

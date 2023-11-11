@@ -1,0 +1,27 @@
+@import '/styles/global/vars.scss';
+
+.wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FFF;
+  box-shadow: 0px 4px 33px 0px rgba(0, 0, 0, 0.05);
+  min-height: 235px;
+  width: 100%;
+  @include defaultAnim;
+  
+  &:hover {
+    box-shadow: 0px 4px 22px 0px rgba(116, 92, 0, 0.2); 
+  }
+
+  .image {
+    flex: 1 0 188px;
+  }
+  .body {
+    padding: 20px;
+
+    .descr {
+      font-weight: 500;
+      @include setFont(16px,22.5px);
+    }
+  }
+}
