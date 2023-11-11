@@ -1,5 +1,5 @@
 import styles from './styles.module.scss';
-import { FC, useEffect, useState } from 'react'
+import { FC, useState } from 'react'
 import navigationMenuList from '@/data/navigationMenuList';
 import Button from '@/components/shared/button/Button';
 import {FiMapPin} from 'react-icons/fi';
@@ -11,8 +11,6 @@ import { useRouter } from 'next/router';
 const HeaderNav:FC<any> = () => {
   const [modal, setModal] = useState(false)
   const router = useRouter()
-
-  useEffect(() => console.log(router), [router])
 
   return (  
     <div className={styles.wrapper}>
