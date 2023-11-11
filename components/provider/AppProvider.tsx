@@ -12,7 +12,6 @@ import { main_setFetchPreDataStatus } from '@/store/slices/main/mainSlice';
 import Animated from '../shared/animated/Animated';
 
 
-
 setGlobalStyleVariables(globalStyleVars)
 
 const AppProvider:FC<PropsWithChildren> = ({children}) => {
