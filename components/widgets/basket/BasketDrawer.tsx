@@ -23,7 +23,7 @@ const BasketDrawer = () => {
       <DrawerOverlay style={{backdropFilter: 'blur(3px)'}}/>
       <DrawerContent maxW={520}>
         <IconButton 
-          onClick={() => dispatch(open_basketModal())}
+          onClick={() => dispatch(close_basketModal())}
           style={{
             position: 'absolute',
             left: -50,
