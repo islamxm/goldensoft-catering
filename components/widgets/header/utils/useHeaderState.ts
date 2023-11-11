@@ -33,6 +33,18 @@ const useHeaderState = () => {
     setIsSearchOpen(s => !s)
   }
 
+  const onHover = () => {
+    if(isScrolled) {
+      setIsScrolled(false)
+    }
+  }
+  
+  const onLeave = () => {
+    if(document.documentElement.scrollTop > 50) {
+      setIsScrolled(true)
+    }
+  }
+
   return {
     isScrolled,
     isHidden,
@@ -42,7 +54,10 @@ const useHeaderState = () => {
     searchClose,
     searchOpen,
     searchToggle,
-    setActionWidth
+    setActionWidth,
+    setIsScrolled,
+    onHover,
+    onLeave
   };
 }
 

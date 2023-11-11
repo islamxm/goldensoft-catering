@@ -23,7 +23,10 @@ const Header:FC<PropsType> = () => {
       className={setClassNames([
       styles.wrapper,
       headerState.isScrolled && styles.scrolled
-    ])}>
+    ])}
+      onMouseEnter={headerState.onHover}
+      onMouseLeave={headerState.onLeave}
+      >
       <HeaderTop/>
       <div className={styles.bottom}>
         <Container>
