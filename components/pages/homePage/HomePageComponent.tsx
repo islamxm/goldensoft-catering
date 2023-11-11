@@ -36,7 +36,7 @@ const HomePageComponent:FC<any> = () => {
         <Stack spacing={35}>
             <Tabs
                 onChange={(id, item, data) => {
-                  console.log(item)
+                  // console.log(item)
                 }}
                 list={tabList}
                 defaultActiveItem={{tabId: 1, tabLabel: 'Все'}}
