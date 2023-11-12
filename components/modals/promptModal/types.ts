@@ -1,5 +1,4 @@
 import { ButtonVariant } from '@/components/shared/button/type';
-import {type UseModalProps} from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
 type ActionType = {
@@ -9,14 +8,12 @@ type ActionType = {
   buttonVariant?: ButtonVariant
 }
 
-type PropsType = UseModalProps & {
-  data?: {
-    title?: string,
-    content?: ReactNode,
-    action?: {
-      accept?: ActionType,
-      reject?: ActionType
-    }
+type PropsType = {
+  title?: string,
+  content?: ReactNode,
+  action?: {
+    accept?: ActionType,
+    reject?: ActionType
   }
 }
 

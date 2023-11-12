@@ -1,8 +1,4 @@
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-} from '@chakra-ui/react'
+import Modal from '@/components/shared/modal/Modal';
 import Product from './Product';
 import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import { close_productModal } from '@/store/slices/modal/modalSlice';
@@ -16,11 +12,9 @@ const ProductModal = () => {
       isOpen={productModal}
       onClose={() => dispatch(close_productModal())}
       isCentered
+      contentWidth={885}
       >
-      <ModalOverlay/>
-      <ModalContent style={{background: 'unset'}} maxW={885}>
-        <Product/>
-      </ModalContent>
+      <Product/>
     </Modal>
   )
 }
