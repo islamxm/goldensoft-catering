@@ -2,6 +2,7 @@ import setClassNames from '@/utils/setClassNames';
 import styles from './styles.module.scss';
 import PropsType, {ButtonVariant} from './type';
 import { FC } from 'react'
+import { PulseLoader } from 'react-spinners';
 
 // const st:Record<ButtonVariant, any> = {
 //   simple: 'undefined',
@@ -37,10 +38,13 @@ const Button:FC<PropsType> = (props) => {
         isFill && styles.fill,
         restProps?.className
       ])}>
+      {isLoading && (
+        <div className={styles.loader}>
+          {<PulseLoader className={styles.loader_el}/>}
+        </div>
+      )}
       <div className={styles.body}>
-        {isLoading && (
-          <div className={styles.loader}></div>
-        )}
+        
         {startContent && (
           <div className={setClassNames([styles.ex, styles.start])}>{startContent}</div>
         )}
